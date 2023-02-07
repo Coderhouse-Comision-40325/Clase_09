@@ -8,8 +8,10 @@ const app = express();
 const routerMascotas = express.Router();
 const routerPersonas = express.Router();
 
-routerMascotas.use(express.json());
-routerPersonas.use(express.json());
+// Declaramos los endpoints
+app.use('/mascotas', routerMascotas);
+app.use('/personas', routerPersonas);
+
 routerMascotas.use(express.urlencoded({extended: true}));
 routerPersonas.use(express.urlencoded({extended: true}));
 

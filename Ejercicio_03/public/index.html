@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ingreso de personas & mascotas</title>
+</head>
+<body>
+    <h2>Ingrese Mascota</h2>
+    <form action="/mascotas/guardar" method="POST">
+        Nombre: <input type="text" name="nombre">
+        Raza: <input type="text" name="raza">
+        Edad: <input type="text" name="edad">
+        <button>Enviar</button>
+    </form>
+
+    </br></hr>
+
+    <h2>Subir foto de mascota</h2>
+
+    <form action="/subir" enctype="multipart/form-data" method="POST">
+        <input type="file" name="miArchivo">
+        <input type="submit" value="Subir archivos">
+    </form>
+
+    <h2></h2>
+</body>
+</html>
